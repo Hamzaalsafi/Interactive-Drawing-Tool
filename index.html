@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="11460794.png" type="image/png" sizes="96">
+
+    <title>Drawing </title>
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="pencilcolor">
+    <ul>
+      <button class="color" style="background-color: #4B4B4B;" data-color="#4B4B4B"></button>
+  <button class="color" style="background-color: #FF0000;" data-color="#FF0000"></button>
+  <button class="color" style="background-color: #00FF00;" data-color="#00FF00"></button>
+  <button class="color" style="background-color: #0000FF;" data-color="#0000FF"></button>
+  <button class="color" style="background-color: #FFFF00;" data-color="#FFFF00"></button>
+  <button class="color" style="background-color: #FF00FF;" data-color="#FF00FF"></button>
+  <button class="color" style="background-color: #00FFFF;" data-color="#00FFFF"></button>
+
+     
+    </ul>
+    <br>
+    <div class="addcolor">
+      <input type="color" id="colorPicker" value="#f6b73c" >
+      <img  src="11460794.png" width="55px" height="auto"> 
+      <br> <br> <br> 
+      <div class="slider-container">
+        <input type="range" id="rangePicker" value="5" min="0" max="100">
+        <div class="tooltip" id="sliderValue">5</div>
+        
+    </div>
+    </div>
+    
+    </div>
+  <div class="cursorimg">
+  <img class="cursor PEN" src="IMG_0722.PNG" width="45px" height="auto">
+  <img class="cursor BRUSH" src="IMG_0714.PNG" width="90px" height="auto">
+  <img class="cursor PENCIL" src="IMG_0705.PNG" width="55px" height="auto">
+  <img class="cursor FEATHER" src="IMG_0731.PNG" width="80px" height="auto">
+  <img class="cursor ERASER" src="IMG_0713.PNG" width="80px" height="auto">
+  <img class="cursor HIGHLIGHTER" src="9021815F-315B-4303-A230-B97F176DC9B4.png" width="80px" height="auto">
+</div>
+</div>
+  <nav class="vertical-toolbar">
+    <ul class="toolbar-icons">
+      <li><button class="active" id="mousebutton"><i class="fas fa-mouse-pointer"></i></button></li>
+      <li><button id="drawingbutton"><i class="fas fa-paint-brush"></i></button></li>
+      <li><button id="shapebtn"><i class="fa-solid fa-shapes"></i></button></li>
+      <li><button id="textbtn"><i class="fas fa-font"></i></button></li>
+      <li><button id="undoButton"><i class="fa-solid fa-arrow-rotate-left"></i></button></li>
+      <li><button id="redoButton"><i class="fa-solid fa-rotate-right"></i></button></li>
+      <li><button id="saveBtn"><i class="fas fa-save"></i></button></li>
+      <li><button id="trash"><i class="fa-regular fa-trash-can"></i></button></li>
+      <li><button ><i class="fas fa-cog"></i></button></li>
+    </ul>
+  </nav>
+ <div class="text">
+  <!-- <h1 id="texth1" draggable="true" contenteditable="true">test</h1> -->
+</div>
+<div id="shapeToolbar" class="shape-toolbar">
+  <button class="shape-btn rectangle" data-shape="rectangle" title="Rectangle">
+    <div class="shape-icon rectangle-icon"></div>
+  </button>
+  <button class="shape-btn square" data-shape="square" title="Square">
+    <div class="shape-icon square-icon"></div>
+  </button>
+  <button class="shape-btn circle" data-shape="circle" title="Circle">
+    <div class="shape-icon circle-icon"></div>
+  </button>
+  <button class="shape-btn line" data-shape="line" title="Line">
+    <div class="shape-icon line-icon"></div>
+  </button>
+  <button class="shape-btn triangle" data-shape="triangle" title="Triangle">
+    <div class="shape-icon triangle-icon"></div>
+  </button>
+  <button class="shape-btn star" data-shape="star" title="Star">
+    <div class="shape-icon star-icon"></div>
+  </button>
+
+  <!-- New fill toggle -->
+  <div class="checkbox-wrapper-41">
+    <input type="checkbox" id="fillToggle">
+  </div>
+  <!-- New color input -->
+
+  <input type="color" id="shapecolor" name="textcolor" value="#000000" >
+  <img  src="11460794.png" width="67px" height="auto"> 
+
+</div>
+
+
+
+<div class="texteditBtn">
+  <input type="color" id="textcolor" name="textcolor" value="#000000" >
+  <img  src="11460794.png" width="47px" height="auto"> 
+  <div class="slider-container2">
+    <input type="range" id="rangePicker2" value="24" min="0" max="100">
+    <div class="tooltip2" id="sliderValue2">24</div>
+    
+</div>
+  
+</div>
+  <div class="pen-toolbar" draggable="true">
+    <ul class="toolbar-icons">
+      <button id="activepentoolbar" ><i class="fa-solid fa-arrow-down"></i></button>
+      <div class="box2" draggable="true">
+      <div class="hiddenpart">
+        <li><button id="pencil" data-tool="pencil"><img src="IMG_0743.PNG" width="120px"></button></li>
+        <li><button id="pen" data-tool="pen"><img class="pen"src="D5F4D721-07F8-4720-B2BA-D0F77DB899E1.PNG" width="130px"></button></li>
+        <li><button id="highlighter" data-tool="highlighter"><img class="pen"src="9021815F-315B-4303-A230-B97F176DC9B4.png" width="130px"></button></li>
+        <li><button  id="feather" data-tool="feather"><img src="IMG_0731.PNG" width="130px"></button></li>
+        <li><button id="brush" data-tool="brush"><img src="IMG_0714.PNG" width="153px"></button></li>
+      <li><button id="eraser" data-tool="eraser"><img src="IMG_0713.PNG" width="120px" height="100px"></button></li>
+      <li><button id="colorbar" data-tool="colorbar"><img src="2867978.png" width="85px" height="100px"></button></li>
+      
+    </div></div>
+    </ul>
+   
+</div>
+    <div class="drawingcontainer">
+    <canvas id="drawingCanvas" ></canvas>
+  </div>
+    <br>
+    <script src="script.js"></script>
+    
+</body>
+</html>
